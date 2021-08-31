@@ -1,0 +1,14 @@
+nvcc -std=c++11 *.cpp \
+-o test.out \
+-x cu \
+-Xcompiler \
+-fPIC \
+-gencode arch=compute_61,code=compute_61 \
+-I /home/sensetime/Documents/caffe-me/include \
+-L /home/sensetime/Documents/caffe-me/build/lib/ -lcaffe \
+-lboost_system \
+-lglog \
+-lopencv_core \
+-lopencv_highgui \
+-lopencv_imgproc \
+-lopencv_gpu
